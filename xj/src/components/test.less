@@ -1,0 +1,29 @@
+@grey: #B0B0B0;
+@white: white;
+@ec: #ececec;
+@line: #b1b1b1;
+@red: #F3683F;
+@splab: #E5891C;
+@black: black;
+@orange: orange;
+@touming: transparent;
+
+.ztys (@ztys:@white) {
+  color: @ztys;
+}
+.bj (@bj:@white) {
+  background: @bj;
+}
+.bk (@width: .04rem, @color: @grey, @radius: .1rem){
+  border: @width solid @color;
+  border-radius: @radius;
+}
+.midlab (@font: .32rem,@color: black) {
+  font-size: @font;
+  color: @color;
+}
+.shadow-lower-right(@x: .04rem, @y: .04rem, @width: .1rem, @shadowcolor:cyan){
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}

@@ -1,0 +1,261 @@
+.px2rem(@name, @px) {
+    @{name}: @px / 100 * 1rem;
+}
+
+@base-nomalfontsize:0.26rem;
+
+@fm: "PingFangSC-Regular";
+@fm-semi: "PingFangSC-Semibold";
+@fm-light: "PingFangSC-Light";
+@fm-thin: "PingFangSC-Thin";
+@fm-ultra: "PingFangSC-Ultralight";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+body {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: @fm;
+
+  &.semi {
+    font-family: @fm-semi;
+  }
+
+  &.light {
+    font-family: @fm-light;
+  }
+
+  &.thin {
+    font-family: @fm-thin;
+  }
+
+  &.ultra {
+    font-family: @fm-ultra;
+  }
+}
+
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+}
+
+h1 {
+  .px2rem(font-size, 36);
+}
+
+h2 {
+  .px2rem(font-size, 32);
+}
+
+h3 {
+  .px2rem(font-size, 28);
+}
+
+h4,
+
+p {
+  .px2rem(font-size, 36);
+}
+
+h5 {
+  .px2rem(font-size, 22);
+}
+
+h6 {
+  .px2rem(font-size, 18);
+}
+
+a {
+  text-decoration: none;
+  img {
+    border: 0;
+  }
+}
+samp{
+  font-style: normal;
+}
+
+
+/*遮罩层*/
+.overlayer{
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index: 10;
+  background: rgba(0,0,0,.5);
+  overflow: hidden;
+  .alert{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 90%;
+    background: white;
+    height: 5rem;
+    border-radius: .2rem;
+    .up{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 4rem;
+      background: transparent;
+      .img{
+        flex: 2;
+        width: 2rem;
+        height: 2rem;
+        display: block;
+        margin: 0 auto;
+        margin-top: .3rem;
+        margin-bottom: .3rem;
+        border-radius: 50%;
+        background: peachpuff;
+      }
+      .title{
+        flex: 1;
+        text-align: center;
+        color:black;
+        font-size: .4rem;
+      }
+      .des{
+        flex: 1;
+        text-align: center;
+        color:#ececec;
+        font-size: .26rem;
+      }
+    }
+    .bottom{
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      height: 1rem;
+      border-top: 2px solid grey;
+      .cancel{
+        width:calc((100% - 2px) /2);
+        border-right: 2px solid grey;
+        float: left;
+        height: 1rem;
+        font-size: .4rem;
+        line-height: 2.5;
+        text-align: center;
+        background: transparent;
+        color:#67B0E6;
+      }
+      .ok{
+        width:calc((100% - 2px) /2);
+        float: right;
+        height: 1rem;
+        font-size: .4rem;
+        line-height: 2.5;
+        text-align: center;
+        background: transparent;
+        color:#67B0E6;
+      }
+    }
+  }
+}
+.signup_bottompicker{
+  position: fixed;
+  bottom: 0.25rem;
+  left: 0.25rem;
+  right: 0.25rem;
+  background: white;
+  padding: 0.2rem;
+  border-radius: 0.1rem;
+  z-index: 7;
+  border: 2px solid #52B4C6;
+}
+
+//.picker-items{
+//  z-index: 6;
+//  background: white;
+//}
+//.mint-popup{
+//  position: relative;
+//}
+//.mint-datetime-action {
+//  display: inline-block;
+//  width: 50%;
+//  text-align: center;
+//  line-height: 1;
+//  font-size: 0.3rem;
+//  color: black;
+//  float: left;
+//}
+
+//.richtext {
+//  padding: 0.2rem;
+//  h1,
+//  h2,
+//  h3,
+//  h4,
+//  h5,
+//  h6 {
+//    font-weight: bold;
+//    margin: .2rem 0;
+//  }
+//
+//  h1 {
+//    .px2rem(font-size, 42);
+//  }
+//
+//  h2 {
+//    .px2rem(font-size, 36);
+//  }
+//
+//  h3 {
+//    .px2rem(font-size, 32);
+//  }
+//
+//  h4,
+//  p {
+//    .px2rem(font-size, 28);
+//    margin: .2rem 0;
+//  }
+//
+//  h5 {
+//    .px2rem(font-size, 20);
+//  }
+//
+//  h6 {
+//    .px2rem(font-size, 16);
+//  }
+//  ol {
+//    .px2rem(font-size, 28);
+//    margin-left: 0.5rem;
+//  }
+//  ul {
+//    .px2rem(font-size, 28);
+//    margin-left: 0.5rem;
+//  }
+//}
+
+.v-modal {
+  display: none;
+}
